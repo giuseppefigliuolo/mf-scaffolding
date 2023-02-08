@@ -1,6 +1,6 @@
-import React, { lazy, Suspense } from 'react'
+import React, { lazy, Suspense } from 'react';
 
-const LazyTestButton = lazy(() => import('app1/TestButton'))
+const LazyTestButton = lazy(() => import('app1/TestButton'));
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
         <LazyTestButton />
       </Suspense>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
