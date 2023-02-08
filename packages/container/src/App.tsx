@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 
 const LazyTestButton = lazy(() => import('app1/TestButton'));
 
-const App = () => {
+function App() {
   return (
     <div>
       <Suspense fallback={<div>loading...</div>}>
@@ -10,6 +10,6 @@ const App = () => {
       </Suspense>
     </div>
   );
-};
+}
 
 export default App;

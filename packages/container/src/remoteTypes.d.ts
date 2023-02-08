@@ -1,5 +1,7 @@
-declare module 'app1/TestButton' {
-  const TestButton: React.ComponentType
+import React from 'react';
 
-  export default TestButton
+declare module 'app1/TestButton' {
+  const TestButton: React.ComponentType;
+
+  export default TestButton;
 }
