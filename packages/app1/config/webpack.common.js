@@ -4,6 +4,19 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|jsx|tsx|ts)$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(css|scss)$/i,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
+      },
+      {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
@@ -15,6 +28,10 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    modules: ['src', 'node_modules']
   },
   plugins: [
     new HtmlWebpackPlugin({
